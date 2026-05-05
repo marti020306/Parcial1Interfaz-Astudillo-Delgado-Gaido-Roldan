@@ -9,6 +9,7 @@ default void MostrarEstadoAcademico()
 {
     System.out.println("Condicion: " + getCondicion());
     System.out.println("promedio: " + getpromedio());
+    System.out.println("Aprobado:" + esAprobado());
 }
 
 
