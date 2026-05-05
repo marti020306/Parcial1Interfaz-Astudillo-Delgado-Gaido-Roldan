@@ -1,3 +1,5 @@
+package academico;
+
 public class Materia implements Consultable
 {
 
@@ -53,8 +55,6 @@ public class Materia implements Consultable
     {
         System.out.println("[ " + codigo + "] " + nombre + " - " + cuatrimestre + "º cuatrimestre " + anio );
     }
-
-
 
 
 

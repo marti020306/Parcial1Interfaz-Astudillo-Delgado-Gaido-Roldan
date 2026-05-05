@@ -1,4 +1,7 @@
+package academico;
+
 import java.util.ArrayList;
+
 
 public class InscripcionMateria implements Evaluable //implemets averigurar
 {
