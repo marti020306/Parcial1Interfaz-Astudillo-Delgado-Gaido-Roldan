@@ -5,3 +5,12 @@ public interface Evaluable
     boolean esAprobado();
 }
 
+default void MostrarEstadoAcademico()
+{
+    System.out.println("Condicion: " + getCondicion());
+    System.out.println("promedio: " + getpromedio());
+}
+
+
+
+
