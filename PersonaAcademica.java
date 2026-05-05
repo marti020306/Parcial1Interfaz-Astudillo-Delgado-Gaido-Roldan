@@ -1,4 +1,4 @@
-public abstract class PersonaAcademica 
+ public abstract class PersonaAcademica 
 { 
     private String nombre;
     private String legajo;

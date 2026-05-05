@@ -9,8 +9,8 @@ public class Materia
     public Materia(String nombre, String codigo, int cuatrimestre, int anio) 
     {
         this.nombre = nombre;
-        this.codigo = codigo;
-        this.cuatrimestre = cuatrimestre;
+        setCodigo(codigo);
+        setCuatrimestre(cuatrimestre);
         this.anio = anio;
     }
     public String getNombre() 
@@ -29,4 +29,21 @@ public class Materia
     {
         return anio;
     }
-}
+
+    public void setCodigo(String codigo) 
+    {
+        if (codigo == null || codigo.length() <3 || codigo.length() > 10)
+        {
+            throw new IllegalArgumentException("Codigo debe tener entre 3 y 10 caracteres");
+        }
+        this.codigo = codigo;
+    }
+    public void setCuatrimestre(int cuatrimestre) 
+    {
+        if (cuatrimestre != 1 && cuatrimestre != 2) 
+
+        {
+            throw new IllegalArgumentException("Cuatrimestre debe ser 1 o 2");
+        }
+        this.cuatrimestre = cuatrimestre;
+    }

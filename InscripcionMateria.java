@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class InscripcionMateria implements Evaluable 
+public class InscripcionMateria implements Evaluable //implemets averigurar
 {
 
     private Materia materia;
@@ -17,5 +17,29 @@ public class InscripcionMateria implements Evaluable
         this.totalClases = 0;
         this.clasesAsistidas = 0;
         this.notas = new ArrayList<Double>();
+    }
+
+    public Materia getMateria()
+    {
+        return materia;
+    }
+
+    public void registrarAsistencia (boolean presente)
+    {
+        totalClases++;
+        if (presente)
+        {
+            clasesAsistidas++;
+        }
+    }
+
+    public void agregarNota(boolean presente)
+    {
+        totalClases++;
+        if (presente)
+        {
+            clasesAsistidas++;
+        }
+
     }
 }
