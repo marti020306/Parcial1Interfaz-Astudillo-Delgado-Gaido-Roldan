@@ -1,4 +1,4 @@
-public class Materia 
+public class Materia implements Consultable
 {
 
     private String nombre;
@@ -39,7 +39,7 @@ public class Materia
         this.codigo = codigo;
     }
     public void setCuatrimestre(int cuatrimestre) 
-    {
+     {
         if (cuatrimestre != 1 && cuatrimestre != 2) 
 
         {
@@ -47,3 +47,15 @@ public class Materia
         }
         this.cuatrimestre = cuatrimestre;
     }
+
+    @Override
+    public void MostrarResumen()
+    {
+        System.out.println("[ " + codigo + "] " + nombre + " - " + cuatrimestre + "º cuatrimestre " + anio );
+    }
+
+
+
+
+
+}
