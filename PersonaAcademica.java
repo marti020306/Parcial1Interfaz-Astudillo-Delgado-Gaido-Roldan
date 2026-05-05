@@ -1,3 +1,7 @@
+package academico;
+import java.util.Scanner;
+
+
 public abstract class PersonaAcademica 
 {
     private String nombre;

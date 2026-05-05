@@ -1,16 +1,21 @@
+package academico;
+
+
 public interface Evaluable 
 { 
     String getCondicion();
     double getpromedio();
     boolean esAprobado();
+
+    default void MostrarEstadoAcademico()
+    {
+        System.out.println("Condicion: " + getCondicion());
+        System.out.println("promedio: " + getpromedio());
+        System.out.println("Aprobado:" + esAprobado());
+    }
+
 }
 
-default void MostrarEstadoAcademico()
-{
-    System.out.println("Condicion: " + getCondicion());
-    System.out.println("promedio: " + getpromedio());
-    System.out.println("Aprobado:" + esAprobado());
-}
 
 
 
