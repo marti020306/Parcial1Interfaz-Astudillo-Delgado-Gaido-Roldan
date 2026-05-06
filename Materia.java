@@ -48,10 +48,19 @@ public class Materia implements Consultable
             throw new IllegalArgumentException("Cuatrimestre debe ser 1 o 2");
         }
         this.cuatrimestre = cuatrimestre;
+    } 
+
+    public void setAnio (int anio)
+    {
+        if (anio < 2000)
+        {
+            throw new IllegalArgumentException("Año invalido");       
+        }
+        this.anio=anio;
     }
 
     @Override
-    public void MostrarResumen()
+    public void mostrarResumen()
     {
         System.out.println("[ " + codigo + "] " + nombre + " - " + cuatrimestre + "º cuatrimestre " + anio );
     }
