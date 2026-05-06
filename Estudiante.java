@@ -19,5 +19,12 @@ public String getCarrera()
 {
     return carrera;
 }
-
+public void setCarrera(String carrera)
+{
+    if (carrera == null || carrera.isEmpty())
+    {
+        throw new IllegalArgumentException("Carrera invalida");
+    }
+    this.carrera=carrera;
+}
     
