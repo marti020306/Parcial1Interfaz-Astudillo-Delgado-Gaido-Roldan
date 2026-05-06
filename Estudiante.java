@@ -15,5 +15,9 @@ public Estudiante(String nombre, String legajo, String carrera, int anioIngreso)
     setAnioIngreso(anioIngreso);
     this.materias = new ArrayList<>();
 }
+public String getCarrera()
+{
+    return carrera;
+}
 
     
