@@ -27,4 +27,15 @@ public void setCarrera(String carrera)
     }
     this.carrera=carrera;
 }
-    
+public int getAnioIngreso()
+{
+    return anioIngreso;
+}
+public void setAnioIngreso(int anioIngreso)
+{
+    if (anioIngreso<2000)
+    {
+        throw new IllegalArgumentException("Año de ingreso invalido");
+    }
+    this.anioIngreso=anioIngreso;
+}
