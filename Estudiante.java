@@ -39,3 +39,7 @@ public void setAnioIngreso(int anioIngreso)
     }
     this.anioIngreso=anioIngreso;
 }
+public ArrayList<InscripcionMateria>getMaterias()
+{
+    return materias;
+}
