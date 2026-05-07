@@ -86,3 +86,16 @@ public double getPromedioGeneral()
     }
     return suma/materias.size();
 }
+public ArrayList<InscripcionMateria>getMateriasCriticas();
+{
+    ArrayList<InscripcionMateria>criticas=new ArrayList<>();
+    for(InscripcionMateria i : materias)
+    {
+        double p=i.getPorcentajeAsistencia();
+        if(p>=75 && <=85)
+        {
+            criticas.add(i);
+        }
+    }
+    return criticas;
+}
