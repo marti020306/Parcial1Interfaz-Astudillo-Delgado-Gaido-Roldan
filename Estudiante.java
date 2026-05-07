@@ -43,3 +43,11 @@ public ArrayList<InscripcionMateria>getMaterias()
 {
     return materias;
 }
+public void inscribirse(Materia m)
+{
+    if (getInscripcion(m.getCodigo())!=null)
+    {
+        throw new IllegalArgumentException("Ya esta inscripto en esa materia")
+    }
+    materias.add(new InscripcionMateria(m));
+}
