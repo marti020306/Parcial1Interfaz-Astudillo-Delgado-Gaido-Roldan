@@ -3,7 +3,7 @@ package academico;
 import java.util.ArrayList;
 
 
-public class InscripcionMateria implements Evaluable //implemets averigurar
+public class InscripcionMateria implements Evaluable
 {
 
     private Materia materia;
@@ -23,7 +23,7 @@ public class InscripcionMateria implements Evaluable //implemets averigurar
     }
 
     public Materia getMateria()
-    {
+    { 
         return materia;
     }
 
@@ -36,13 +36,55 @@ public class InscripcionMateria implements Evaluable //implemets averigurar
         }
     }
 
-    public void agregarNota(boolean presente)
+    public void agregarNota(boolean nota)
     {
-        totalClases++;
-        if (presente)
-        {
-            clasesAsistidas++;
-        }
+       if (nota < 0 || nota > 10)
+       {
+        throw new IllegalArgumentException("La nota debe ser entre 0 y 10");
+       }
 
+       if (notas.size() >= MAX_NOTAS)
+       {
+            throw new IllegalStateException("No se pueden agregar mas de 5 notas");
+       }
+       notas.add(nota);
+
+    }
+     public double getPorcentajeAsistencia()
+     {
+        if (totalClases == 0)
+        {
+            return 0;
+        }
+        return (clasesAsistidas * 100.0) / totalClases;
+     }
+
+     @Override 
+     public String getCondion()
+     {
+        if (getPorcentajeAsistencia () >= MINIMO_REGULAR)
+        {
+            return "Regular";
+        }
+        else
+        {
+            return "Libre";
+        }
+     }
+
+     @Override 
+     public double getPromedio()
+    {
+        if(notas.isEmpty())
+        {
+            return 0;
+        }
+        double suma= 0;
+
+        for (double nota: notas)
+        {
+            suma += nota;
+        }
+        return suma/ notas.size();
     }
 }
