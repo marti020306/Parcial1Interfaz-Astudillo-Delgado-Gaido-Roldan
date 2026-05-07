@@ -102,6 +102,7 @@ public class Estudiante extends PersonaAcademica implements Consultable
         return criticas;
     }
 
+    //Mostrar resumen(Datos del estudiante)
     @Override
     public void MostrarResumen()
     {
