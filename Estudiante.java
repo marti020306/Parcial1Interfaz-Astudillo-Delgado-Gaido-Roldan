@@ -15,6 +15,7 @@ public Estudiante(String nombre, String legajo, String carrera, int anioIngreso)
     setAnioIngreso(anioIngreso);
     this.materias = new ArrayList<>();
 }
+//Carrera
 public String getCarrera()
 {
     return carrera;
@@ -27,6 +28,8 @@ public void setCarrera(String carrera)
     }
     this.carrera=carrera;
 }
+
+//Año ingreso
 public int getAnioIngreso()
 {
     return anioIngreso;
@@ -39,6 +42,8 @@ public void setAnioIngreso(int anioIngreso)
     }
     this.anioIngreso=anioIngreso;
 }
+
+//Materias/Inscripcion/Dar de baja
 public ArrayList<InscripcionMateria>getMaterias()
 {
     return materias;
@@ -50,4 +55,8 @@ public void inscribirse(Materia m)
         throw new IllegalArgumentException("Ya esta inscripto en esa materia")
     }
     materias.add(new InscripcionMateria(m));
+}
+public void darDeBaja(String codigoMateria)
+{
+    materias.removeIf(i->i.getMateria().getCodigo().equalsIgnoreCase(codigoMateria))
 }
